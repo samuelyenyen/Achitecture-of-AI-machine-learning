@@ -1,0 +1,347 @@
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2022/12/03 20:53:27
+// Design Name: 
+// Module Name: Cfu_tb
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+`timescale 1ns / 1ps
+
+module Cfu_tb;
+    
+    //make logics for inputs and outputs!
+    reg         clk;
+    reg        reset;
+    reg         cmd_valid, rsp_ready;
+    wire        cmd_ready, rsp_valid;
+    reg[9:0]    cmd_payload_function_id;
+    reg[31:0]   cmd_payload_inputs_0, cmd_payload_inputs_1;
+    wire[31:0]   rsp_payload_outputs_0;
+    
+    
+    //make an instance of the counter...call it uut or my_counter or something else
+    Cfu my_cfu(       .cmd_valid(cmd_valid),
+                      .cmd_ready(cmd_ready),
+                      .cmd_payload_function_id(cmd_payload_function_id),
+                      .cmd_payload_inputs_0(cmd_payload_inputs_0),
+                      .cmd_payload_inputs_1(cmd_payload_inputs_1),
+                      .rsp_valid(rsp_valid),
+                      .rsp_ready(rsp_ready),
+                      .rsp_payload_outputs_0(rsp_payload_outputs_0),
+                      .reset(reset),
+                      .clk(clk) );                            
+    
+    //An always block in simulation **always** runs in the background
+    //this is your standard way of making a clock below:
+    //it says: every 5 ns, make clk be !clk
+    //still need to initialize clk in an initial block
+    always begin
+        #5
+        clk = !clk;
+    end
+    
+    //initial block...this is our test simulation
+    initial begin
+        $display("Starting Sim"); //print nice message
+        clk = 0; //initialize clk (super important)
+        reset = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;   
+        cmd_valid = 0;
+        rsp_ready = 1;
+        #5
+        reset = 1;        
+        #10
+        reset = 0;      
+        #21//KMN
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000001001;
+        cmd_payload_inputs_0 = 32'b00000000000001010000010100000101;
+        cmd_payload_inputs_1 = 32'd0;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;   
+        #30//A buffer 0
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000010001;
+        cmd_payload_inputs_0 = 32'h54fb39d5;
+        cmd_payload_inputs_1 = 32'd0;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;
+        #30//A buffer 1
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000010001;
+        cmd_payload_inputs_0 = 32'h4cdc389d ;
+        cmd_payload_inputs_1 = 32'd1;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;
+        #30//A buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000010001;
+        cmd_payload_inputs_0 = 32'h5bb66074;
+        cmd_payload_inputs_1 = 32'd2;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;        
+        #30//A buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000010001;
+        cmd_payload_inputs_0 = 32'h98cbe3e1;
+        cmd_payload_inputs_1 = 32'd3;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;        
+        #30//A buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000010001;
+        cmd_payload_inputs_0 = 32'he9366a5d;
+        cmd_payload_inputs_1 = 32'd4;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;
+        #30//A buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000010001;
+        cmd_payload_inputs_0 = 32'ha3000000;
+        cmd_payload_inputs_1 = 32'd5;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;
+        #30//A buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000010001;
+        cmd_payload_inputs_0 = 32'h30000000;
+        cmd_payload_inputs_1 = 32'd6;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx; 
+        #30//A buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000010001;
+        cmd_payload_inputs_0 = 32'hb8000000;
+        cmd_payload_inputs_1 = 32'd7;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;   
+        #30//A buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000010001;
+        cmd_payload_inputs_0 = 32'h64000000;
+        cmd_payload_inputs_1 = 32'd8;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;   
+        #30//A buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000010001;
+        cmd_payload_inputs_0 = 32'h60000000;
+        cmd_payload_inputs_1 = 32'd9;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;                                                        
+        #30//B buffer 0
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000011001;
+        cmd_payload_inputs_0 = 32'hf1cdb1fd;
+        cmd_payload_inputs_1 = 32'd0;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;
+        #30//B buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000011001;
+        cmd_payload_inputs_0 = 32'h4e2fbc61 ;
+        cmd_payload_inputs_1 = 32'd1;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;
+        #30//B buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000011001;
+        cmd_payload_inputs_0 = 32'h810fc957 ;
+        cmd_payload_inputs_1 = 32'd2;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;        
+        #30//B buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000011001;
+        cmd_payload_inputs_0 = 32'h6201d157 ;
+        cmd_payload_inputs_1 = 32'd3;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;  
+        #30//B buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000011001;
+        cmd_payload_inputs_0 = 32'hdc6f64fc ;
+        cmd_payload_inputs_1 = 32'd4;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;  
+        #30//B buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000011001;
+        cmd_payload_inputs_0 = 32'h5e000000 ;
+        cmd_payload_inputs_1 = 32'd5;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;
+        #30//B buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000011001;
+        cmd_payload_inputs_0 = 32'hd8000000 ;
+        cmd_payload_inputs_1 = 32'd6;        
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;            
+        #30//B buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000011001;
+        cmd_payload_inputs_0 = 32'hd1000000 ;
+        cmd_payload_inputs_1 = 32'd7;        
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;   
+        #30//B buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000011001;
+        cmd_payload_inputs_0 = 32'hd84000000 ;
+        cmd_payload_inputs_1 = 32'd8;        
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;   
+        #30//B buffer
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000011001;
+        cmd_payload_inputs_0 = 32'hd46000000 ;
+        cmd_payload_inputs_1 = 32'd9;        
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;   
+        #30//COM
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000000010;
+        cmd_payload_inputs_0 = 32'd0;
+        cmd_payload_inputs_1 = 32'd0;
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;
+        #3000//LOAD
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000000011;
+        cmd_payload_inputs_0 = 32'd0;
+        cmd_payload_inputs_1 = 32'd0;//32:0
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;        
+        #30//LOAD
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000000011;
+        cmd_payload_inputs_0 = 32'd0;
+        cmd_payload_inputs_1 = 32'd1;//32:0
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;       
+        #30//LOAD
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000000011;
+        cmd_payload_inputs_0 = 32'd0;
+        cmd_payload_inputs_1 = 32'd2;//32:0
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;       
+        #30//LOAD
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000000011;
+        cmd_payload_inputs_0 = 32'd0;
+        cmd_payload_inputs_1 = 32'd3;//32:0
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;              
+        #30//END
+        cmd_valid = 1;
+        cmd_payload_function_id = 10'b0000000100;
+        cmd_payload_inputs_0 = 32'd0;
+        cmd_payload_inputs_1 = 32'd0;//32:0
+        #10
+        cmd_valid = 0;
+        cmd_payload_function_id = 10'dx;
+        cmd_payload_inputs_0 = 32'dx;
+        cmd_payload_inputs_1 = 32'dx;              
+        #200 //just let it run for a bit
+        $finish;
+    end
+endmodule
+
+
+

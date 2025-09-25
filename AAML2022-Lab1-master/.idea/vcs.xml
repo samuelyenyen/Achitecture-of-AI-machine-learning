@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/make-env" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/amaranth" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/jinja" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/litedram" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/liteeth" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/litehyperbus" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/liteiclink" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/litepcie" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/litescope" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/litespi" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/litevideo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/litex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/litex_boards" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/markupsafe" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/meson" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/migen" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/pyserial" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/pythondata-misc-tapcfg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/pythondata-software-picolibc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/pythondata-software-picolibc/pythondata_software_picolibc/data" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/pythondata_cpu_vexriscv" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/pythondata_cpu_vexriscv/pythondata_cpu_vexriscv/verilog/ext/VexRiscv" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/pythondata_cpu_vexriscv/pythondata_cpu_vexriscv/verilog/ext/VexRiscv/src/test/resources/VexRiscvRegressionData" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/pythondata_software_compiler_rt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/pyvcd" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/valentyusb" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LAB2/CFU-Playground/third_party/python/vizier" vcs="Git" />
+  </component>
+</project>

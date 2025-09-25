@@ -1,0 +1,119 @@
+module TPU(input clk, rst_n, in_valid,
+           input [7:0]       K, M, N,
+           input [31:0]      A_data_out, B_data_out,
+           input [127:0]     C_data_out,
+           output            A_wr_en, B_wr_en, C_wr_en,
+           output reg [15:0]     A_index, B_index, C_index,
+           output reg [31:0]     A_data_in, B_data_in, 
+           output reg [127:0]    C_data_in,
+           output reg         busy);
+
+//--------------------------state machine-----------------------------------------------------
+reg [2:0] curr_state, next_state; parameter IDLE = 3'b000, CAL = 3'b001, WR = 3'b011, RESETPE = 3'b010;
+//state machine
+always @(posedge clk or negedge rst_n) curr_state <= (!rst_n)? IDLE: next_state;      
+always @(*)begin case (curr_state) IDLE   : next_state = (in_valid)? CAL: IDLE;
+                                   CAL    : next_state = (pe_end==1)? WR: CAL;
+                                   WR     : next_state = (wr_end_r==1 & cal_end==1)? IDLE: (wr_end_r==1)? RESETPE:  WR;
+                                   RESETPE: next_state = CAL;
+                                   default : next_state = IDLE ; endcase end
+//--------------------------CAL---------------------------------------------------------------
+wire pe_end, wr_end, cal_end; reg [7:0] K_r, M_r, N_r; integer i,j;reg have_zero;reg wr_end_r;
+wire [6:0] n_A,n_B; reg [15:0] C_index_r; wire [12:0] B_wn,A_wn; reg [8:0] cal_count; reg [1:0] wr_count; reg [12:0] PE_times; 
+always @(posedge clk or negedge rst_n) busy <= (!rst_n)? 0: (next_state==IDLE)? 0: 1;
+//--------------------------Index control---------------------------------------------------------------
+always @(posedge clk) A_index <= (next_state==CAL&curr_state==RESETPE)?A_index: (next_state==CAL&cal_count<K_r)? A_index+1: (next_state==IDLE)? 0: (curr_state==WR)? n_A*K_r: A_index;
+always @(posedge clk) B_index <= (next_state==CAL&curr_state==RESETPE)?B_index: (next_state==CAL&cal_count<K_r)? B_index+1: (next_state==IDLE)? 0: (curr_state==WR)? n_B*K_r: B_index;
+always @(posedge clk) C_index_r <= (next_state==WR)? C_index_r+1: (next_state==IDLE)? 0: C_index_r;
+always @(posedge clk) C_index <= C_index_r;
+//--------------------------counters---------------------------------------------------------------
+//always @(posedge clk) cal_count1 <= (next_state==IDLE)? 0: (next_state==CAL)? cal_count1+1: cal_count1;
+always @(posedge clk) PE_times <= (next_state==IDLE)? 0: (next_state==WR&curr_state==CAL)?PE_times+1: PE_times;
+always @(posedge clk) cal_count <= (next_state==IDLE)? 0: (next_state==CAL)? cal_count+1: 0;
+always @(posedge clk) wr_count <= (next_state==WR)? wr_count+1: 0;
+//--------------------------state control---------------------------------------------------------------
+always @(posedge clk) have_zero <= (next_state==CAL)? ((n_A+1==A_wn)? 1:0): have_zero;
+assign n_A = PE_times%A_wn;
+assign n_B = PE_times/A_wn;
+assign B_wn = (N_r-1)/4+1;
+assign A_wn = (M_r-1)/4+1;
+assign pe_end = (cal_count == K_r+6)? 1:0;
+assign cal_end = (PE_times==B_wn*A_wn)? 1:0;
+always @(posedge clk) wr_end_r<=wr_end;
+assign wr_end = (M_r%4==0)?((wr_count ==3)? 1: 0): (have_zero)? ((wr_count==M_r%4-1)? 1: 0): ((wr_count ==3)? 1: 0);
+//--------------------------buffer control---------------------------------------------------------------
+assign C_wr_en = (curr_state==WR)? 1: 0;
+assign A_wr_en = 0;
+assign B_wr_en = 0;
+always @(posedge clk) A_data_in <= 0;
+always @(posedge clk) B_data_in <= 0;
+//--------------------------output value---------------------------------------------------------------
+always @(posedge clk) begin 
+    if (next_state==IDLE)
+        C_data_in<=0;
+    else if (next_state==WR) begin
+        case(wr_count)
+            0: C_data_in <= PE_out_row1;
+            1: C_data_in <= PE_out_row2;
+            2: C_data_in <= PE_out_row3;
+            3: C_data_in <= PE_out_row4;
+        endcase
+    end
+end
+//--------------------------reg K,M,N---------------------------------------------------------------
+always @(posedge clk) K_r <= (next_state==IDLE)? 0: (in_valid)? K: K_r;
+always @(posedge clk) M_r <= (next_state==IDLE)? 0:(in_valid)? M: M_r;
+always @(posedge clk) N_r <= (next_state==IDLE)? 0:(in_valid)? N: N_r;
+//--------------------------call PEs---------------------------------------------------------------
+wire [127:0] PE_out_row1,PE_out_row2,PE_out_row3,PE_out_row4;
+wire [7:0] A_pro_1,A_pro_2,A_pro_3,A_pro_4,A_pro_5,A_pro_6,A_pro_7,A_pro_8,A_pro_9,A_pro_10,A_pro_11,A_pro_12;
+wire [7:0] B_pro_1,B_pro_2,B_pro_3,B_pro_4,B_pro_5,B_pro_6,B_pro_7,B_pro_8,B_pro_9,B_pro_10,B_pro_11,B_pro_12;
+reg [7:0] A2_r; always @(posedge clk) A2_r <= (next_state==IDLE)? 0: (curr_state==CAL)? A_IN[1]:A2_r;
+reg [7:0] B2_r; always @(posedge clk) B2_r <= (next_state==IDLE)? 0: (curr_state==CAL)? B_IN[1]:B2_r; 
+reg [7:0] A3_r,A3_rr; always @(posedge clk) A3_r<= (next_state==IDLE)? 0: (curr_state==CAL)?A_IN[2]:A3_r;always @(posedge clk) A3_rr <=(next_state==IDLE)? 0: A3_r;
+reg [7:0] B3_r,B3_rr; always @(posedge clk) B3_r<= (next_state==IDLE)? 0: (curr_state==CAL)?B_IN[2]:B3_r;always @(posedge clk) B3_rr <=(next_state==IDLE)? 0: B3_r;
+reg [7:0] A4_r,A4_rr,A4_rrr; always @(posedge clk) A4_r<= (next_state==IDLE)? 0: (curr_state==CAL)?A_IN[3]:A4_r;always @(posedge clk) A4_rr <=(next_state==IDLE)? 0: A4_r;always @(posedge clk) A4_rrr <=(next_state==IDLE)? 0: A4_rr;
+reg [7:0] B4_r,B4_rr,B4_rrr; always @(posedge clk) B4_r<= (next_state==IDLE)? 0: (curr_state==CAL)?B_IN[3]:B4_r;always @(posedge clk) B4_rr <=(next_state==IDLE)? 0: B4_r;always @(posedge clk) B4_rrr <=(next_state==IDLE)? 0: B4_rr;
+wire [7:0] A_IN [3:0]; wire [7:0] B_IN [3:0];
+assign A_IN[0] = (cal_count>K_r)? 0: A_data_out[31:24];
+assign A_IN[1] = (cal_count>K_r)? 0: A_data_out[23:16];
+assign A_IN[2] = (cal_count>K_r)? 0: A_data_out[15:8];
+assign A_IN[3] = (cal_count>K_r)? 0: A_data_out[7:0];
+assign B_IN[0] = (cal_count>K_r)? 0: B_data_out[31:24];
+assign B_IN[1] = (cal_count>K_r)? 0: B_data_out[23:16];
+assign B_IN[2] = (cal_count>K_r)? 0: B_data_out[15:8];
+assign B_IN[3] = (cal_count>K_r)? 0: B_data_out[7:0];
+
+PEs PE1(.clk(clk),.next_state(next_state), .A_data_out(A_IN[0] ), .B_data_out(B_IN[0]), .PE(PE_out_row1[127:96]), .A_pro_data(A_pro_1),.B_pro_data(B_pro_1),.curr_state(curr_state));
+PEs PE2(.clk(clk),.next_state(next_state), .A_data_out(A_pro_1), .B_data_out(B2_r), .PE(PE_out_row1[95:64]), .A_pro_data(A_pro_2),.B_pro_data(B_pro_2),.curr_state(curr_state));
+PEs PE3(.clk(clk),.next_state(next_state), .A_data_out(A_pro_2), .B_data_out(B3_rr), .PE(PE_out_row1[63:32]), .A_pro_data(A_pro_3),.B_pro_data(B_pro_3),.curr_state(curr_state));
+PEs PE4(.clk(clk),.next_state(next_state), .A_data_out(A_pro_3), .B_data_out(B4_rrr), .PE(PE_out_row1[31:0]), .A_pro_data(),.B_pro_data(B_pro_4),.curr_state(curr_state));
+
+PEs PE5(.clk(clk),.next_state(next_state), .A_data_out(A2_r), .B_data_out(B_pro_1), .PE(PE_out_row2[127:96]), .A_pro_data(A_pro_4),.B_pro_data(B_pro_5),.curr_state(curr_state));
+PEs PE6(.clk(clk),.next_state(next_state), .A_data_out(A_pro_4), .B_data_out(B_pro_2), .PE(PE_out_row2[95:64]), .A_pro_data(A_pro_5),.B_pro_data(B_pro_6),.curr_state(curr_state));
+PEs PE7(.clk(clk),.next_state(next_state), .A_data_out(A_pro_5), .B_data_out(B_pro_3), .PE(PE_out_row2[63:32]), .A_pro_data(A_pro_6),.B_pro_data(B_pro_7),.curr_state(curr_state));
+PEs PE8(.clk(clk),.next_state(next_state), .A_data_out(A_pro_6), .B_data_out(B_pro_4), .PE(PE_out_row2[31:0]), .A_pro_data(),.B_pro_data(B_pro_8),.curr_state(curr_state));
+
+PEs PE9(.clk(clk),.next_state(next_state), .A_data_out(A3_rr), .B_data_out(B_pro_5), .PE(PE_out_row3[127:96]), .A_pro_data(A_pro_7),.B_pro_data(B_pro_9),.curr_state(curr_state));
+PEs PE10(.clk(clk),.next_state(next_state), .A_data_out(A_pro_7), .B_data_out(B_pro_6), .PE(PE_out_row3[95:64]), .A_pro_data(A_pro_8),.B_pro_data(B_pro_10),.curr_state(curr_state));
+PEs PE11(.clk(clk),.next_state(next_state), .A_data_out(A_pro_8), .B_data_out(B_pro_7), .PE(PE_out_row3[63:32]), .A_pro_data(A_pro_9),.B_pro_data(B_pro_11),.curr_state(curr_state));
+PEs PE12(.clk(clk),.next_state(next_state), .A_data_out(A_pro_9), .B_data_out(B_pro_8), .PE(PE_out_row3[31:0]), .A_pro_data(),.B_pro_data(B_pro_12),.curr_state(curr_state));
+
+PEs PE13(.clk(clk),.next_state(next_state), .A_data_out(A4_rrr), .B_data_out(B_pro_9), .PE(PE_out_row4[127:96]), .A_pro_data(A_pro_10),.B_pro_data(),.curr_state(curr_state));
+PEs PE14(.clk(clk),.next_state(next_state), .A_data_out(A_pro_10), .B_data_out(B_pro_10), .PE(PE_out_row4[95:64]), .A_pro_data(A_pro_11),.B_pro_data(),.curr_state(curr_state));
+PEs PE15(.clk(clk),.next_state(next_state), .A_data_out(A_pro_11), .B_data_out(B_pro_11), .PE(PE_out_row4[63:32]), .A_pro_data(A_pro_12),.B_pro_data(),.curr_state(curr_state));
+PEs PE16(.clk(clk),.next_state(next_state), .A_data_out(A_pro_12), .B_data_out(B_pro_12), .PE(PE_out_row4[31:0]), .A_pro_data(),.B_pro_data(),.curr_state(curr_state));
+endmodule
+
+module PEs(input clk,
+           input [2:0]       next_state,curr_state,
+           input [7:0]       A_data_out, B_data_out,
+           output reg [31:0]  PE,
+           output reg [7:0]   A_pro_data,
+           output reg [7:0]   B_pro_data);
+           
+always @(posedge clk) PE <= (next_state==3'b000 | next_state==3'b010)? 32'b0: (curr_state==3'b001)? PE + A_data_out*B_data_out:PE;
+always @(posedge clk) A_pro_data <= (next_state==3'b000)? 0: A_data_out;
+always @(posedge clk) B_pro_data <= (next_state==3'b000)? 0: B_data_out;
+
+endmodule
