@@ -1,0 +1,688 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Jan 16 06:54:04 2023
+# Process ID: 5996
+# Current directory: C:/Users/USER/aaml_final/aaml_final.runs/impl_1
+# Command line: vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file: C:/Users/USER/aaml_final/aaml_final.runs/impl_1/top.vdi
+# Journal file: C:/Users/USER/aaml_final/aaml_final.runs/impl_1\vivado.jou
+# Running On: DESKTOP-0BRDT4N, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 12, Host memory: 16908 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: link_design -top top -part xc7a100tcsg324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clkdivider'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.dcp' for cell 'hes_RAM'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'my_ram'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3.dcp' for cell 'my_ram_V'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'my_rom'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/cordic_0/cordic_0.dcp' for cell 'my_cordic/atan'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/cordic_1/cordic_1.dcp' for cell 'my_cordic/sincos'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.160 . Memory (MB): peak = 1287.391 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 774 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clkdivider/inst'
+Finished Parsing XDC File [c:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clkdivider/inst'
+Parsing XDC File [c:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clkdivider/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [c:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clkdivider/inst'
+Parsing XDC File [C:/Users/USER/aaml_final/nexys4_ddr_lab3.xdc]
+Finished Parsing XDC File [C:/Users/USER/aaml_final/nexys4_ddr_lab3.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1572.762 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+16 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1572.762 ; gain = 285.371
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.716 . Memory (MB): peak = 1572.762 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: 205a0b041
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.243 . Memory (MB): peak = 1592.680 ; gain = 19.918
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-1287] Pulled Inverter counter_bit[1]_i_1 into driver instance counter_bit[1]_i_3, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter counter_com1[8]_i_1 into driver instance counter_com1[1]_i_2, which resulted in an inversion of 9 pins
+INFO: [Opt 31-1287] Pulled Inverter counter_com2[8]_i_1 into driver instance counter_com2[0]_i_2, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter counter_com[8]_i_1 into driver instance counter_com[8]_i_3, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter counter_quan[0]_i_1 into driver instance dina_ram[14]_i_2, which resulted in an inversion of 5 pins
+INFO: [Opt 31-1287] Pulled Inverter current_state[0]_i_1 into driver instance current_state[0]_i_2, which resulted in an inversion of 17 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[10].eng/data_slice/x_plus_y_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[9].eng/data_slice/y_plus_x_shift/inst_i_1__20, which resulted in an inversion of 42 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[10].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[9].eng/phase_slice/phase_plus_atan/inst_i_1__19, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[11].eng/data_slice/x_plus_y_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[10].eng/data_slice/y_plus_x_shift/inst_i_1__22, which resulted in an inversion of 42 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[11].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[10].eng/phase_slice/phase_plus_atan/inst_i_1__21, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[12].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[11].eng/phase_slice/phase_plus_atan/inst_i_1__23, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[12].eng/phase_slice/phase_plus_atan/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[11].eng/data_slice/y_plus_x_shift/inst_i_1__24, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[13].eng/phase_slice/phase_plus_atan/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[13].eng/phase_slice/add_nsub, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[1].eng/data_slice/x_plus_y_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[0].eng/data_slice/y_plus_x_shift/inst_i_1__2, which resulted in an inversion of 42 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[1].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[0].eng/phase_slice/phase_plus_atan/inst_i_1__1, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[2].eng/data_slice/x_plus_y_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[1].eng/data_slice/y_plus_x_shift/inst_i_1__4, which resulted in an inversion of 42 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[2].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[1].eng/phase_slice/phase_plus_atan/inst_i_1__3, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[3].eng/data_slice/x_plus_y_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[2].eng/data_slice/y_plus_x_shift/inst_i_1__6, which resulted in an inversion of 42 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[3].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[2].eng/phase_slice/phase_plus_atan/inst_i_1__5, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[4].eng/data_slice/x_plus_y_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[3].eng/data_slice/y_plus_x_shift/inst_i_1__8, which resulted in an inversion of 42 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[4].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[3].eng/phase_slice/phase_plus_atan/inst_i_1__7, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[5].eng/data_slice/x_plus_y_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[4].eng/data_slice/y_plus_x_shift/inst_i_1__10, which resulted in an inversion of 42 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[5].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[4].eng/phase_slice/phase_plus_atan/inst_i_1__9, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[6].eng/data_slice/x_plus_y_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[5].eng/data_slice/y_plus_x_shift/inst_i_1__12, which resulted in an inversion of 42 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[6].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[5].eng/phase_slice/phase_plus_atan/inst_i_1__11, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[7].eng/data_slice/x_plus_y_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[6].eng/data_slice/y_plus_x_shift/inst_i_1__14, which resulted in an inversion of 42 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[7].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[6].eng/phase_slice/phase_plus_atan/inst_i_1__13, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[8].eng/data_slice/x_plus_y_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[7].eng/data_slice/y_plus_x_shift/inst_i_1__16, which resulted in an inversion of 42 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[8].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[7].eng/phase_slice/phase_plus_atan/inst_i_1__15, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[9].eng/data_slice/x_plus_y_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[8].eng/data_slice/y_plus_x_shift/inst_i_1__18, which resulted in an inversion of 42 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[9].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[8].eng/phase_slice/phase_plus_atan/inst_i_1__17, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_neg_data_x_swap/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_x_plus_y/inst_i_21, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/atan/U0/i_synth/i_synth/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_neg_data_y_swap/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/atan/U0/i_synth/i_synth/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_x_min_y/inst_i_21__0, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[0].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_1 into driver instance my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.input_stage/gen_rotation.gen_rot_phase.gen_phase_cr/inst_i_1__2, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[10].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[9].eng/phase_slice/phase_plus_atan/inst_i_1__12, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[11].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[10].eng/phase_slice/phase_plus_atan/inst_i_1__13, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[12].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[11].eng/phase_slice/phase_plus_atan/inst_i_1__14, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[13].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[12].eng/phase_slice/phase_plus_atan/inst_i_1__15, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[1].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[0].eng/phase_slice/phase_plus_atan/inst_i_1__3, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[2].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[1].eng/phase_slice/phase_plus_atan/inst_i_1__4, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[3].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[2].eng/phase_slice/phase_plus_atan/inst_i_1__5, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[4].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[3].eng/phase_slice/phase_plus_atan/inst_i_1__6, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[5].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[4].eng/phase_slice/phase_plus_atan/inst_i_1__7, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[6].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[5].eng/phase_slice/phase_plus_atan/inst_i_1__8, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[7].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[6].eng/phase_slice/phase_plus_atan/inst_i_1__9, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[8].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[7].eng/phase_slice/phase_plus_atan/inst_i_1__10, which resulted in an inversion of 21 pins
+INFO: [Opt 31-1287] Pulled Inverter my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[9].eng/data_slice/y_plus_x_shift/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_simple_model.carrymux0_i_2 into driver instance my_cordic/sincos/U0/i_synth/i_synth/gen_cordic.cordic_engine/gen_para_arch.gen_iteration[8].eng/phase_slice/phase_plus_atan/inst_i_1__11, which resulted in an inversion of 21 pins
+INFO: [Opt 31-138] Pushed 7 inverter(s) to 127 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 2638bad9e
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.458 . Memory (MB): peak = 1893.484 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 118 cells
+INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 24d8681e5
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.482 . Memory (MB): peak = 1893.484 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 2 cells and removed 7 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 27c428e18
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.675 . Memory (MB): peak = 1893.484 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 450 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 27c428e18
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.741 . Memory (MB): peak = 1893.484 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 1b06e47c5
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.752 . Memory (MB): peak = 1893.484 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 2 cells and removed 6 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 22ed999ff
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.765 . Memory (MB): peak = 1893.484 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |             118  |                                              1  |
+|  Constant propagation         |               2  |               7  |                                              0  |
+|  Sweep                        |               0  |             450  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               2  |               6  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1893.484 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 12690f4e5
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1893.484 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 46 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 1 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 6 Total Ports: 92
+Number of Flops added for Enable Generation: 3
+
+Ending PowerOpt Patch Enables Task | Checksum: 1e3e1f1ab
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.103 . Memory (MB): peak = 2041.719 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1e3e1f1ab
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2041.719 ; gain = 148.234
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 17527b871
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.429 . Memory (MB): peak = 2041.719 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 17527b871
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2041.719 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 17527b871
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2041.719 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+88 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 2041.719 ; gain = 468.957
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 2041.719 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/USER/aaml_final/aaml_final.runs/impl_1/top_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+Command: report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/USER/aaml_final/aaml_final.runs/impl_1/top_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2041.719 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: bfbd7161
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2041.719 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 5776d142
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.276 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: eeb0f811
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.849 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: eeb0f811
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.854 . Memory (MB): peak = 2041.719 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: eeb0f811
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.863 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 86a63f6c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: ba68ccf1
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: ba68ccf1
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 121 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 56 nets or LUTs. Breaked 0 LUT, combined 56 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |             56  |                    56  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |             56  |                    56  |           0  |           4  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.1 Physical Synthesis In Placer | Checksum: 115804e00
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2041.719 ; gain = 0.000
+Phase 2.4 Global Placement Core | Checksum: 1557d6630
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2041.719 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1557d6630
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: b868daa3
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 14f356176
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1592cbe3b
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: e8219aae
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 8b45c726
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 158eb8273
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 189d6e700
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2041.719 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 189d6e700
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 14966dd69
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=1.966 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1260ee530
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.166 . Memory (MB): peak = 2041.719 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 1c52edefb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.190 . Memory (MB): peak = 2041.719 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 14966dd69
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=1.966. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 20317fdae
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2041.719 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 20317fdae
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 20317fdae
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 20317fdae
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2041.719 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 20317fdae
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2041.719 ; gain = 0.000
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2041.719 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2a8d32e50
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2041.719 ; gain = 0.000
+Ending Placer Task | Checksum: 1b57fc88d
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2041.719 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+123 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2041.719 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.213 . Memory (MB): peak = 2041.719 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/USER/aaml_final/aaml_final.runs/impl_1/top_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file top_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2041.719 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_placed.rpt -pb top_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2041.719 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+132 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.209 . Memory (MB): peak = 2041.719 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/USER/aaml_final/aaml_final.runs/impl_1/top_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: d8c23f49 ConstDB: 0 ShapeSum: dcbd8944 RouteDB: 0
+Post Restoration Checksum: NetGraph: ff959bc4 NumContArr: 76f70660 Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 1768ca224
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2074.281 ; gain = 32.562
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 1768ca224
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2080.277 ; gain = 38.559
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 1768ca224
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2080.277 ; gain = 38.559
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 188d1d391
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 2104.812 ; gain = 63.094
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.284  | TNS=0.000  | WHS=-0.333 | THS=-146.070|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 3916
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 3916
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 19455457a
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 2121.629 ; gain = 79.910
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 19455457a
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 2121.629 ; gain = 79.910
+Phase 3 Initial Routing | Checksum: b0181410
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 2125.297 ; gain = 83.578
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 195
+ Number of Nodes with overlaps = 38
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.892  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1cb70921f
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 2125.297 ; gain = 83.578
+Phase 4 Rip-up And Reroute | Checksum: 1cb70921f
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 2125.297 ; gain = 83.578
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1734f4728
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2125.297 ; gain = 83.578
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.899  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 1734f4728
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2125.297 ; gain = 83.578
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1734f4728
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2125.297 ; gain = 83.578
+Phase 5 Delay and Skew Optimization | Checksum: 1734f4728
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2125.297 ; gain = 83.578
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1b18eca23
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2125.297 ; gain = 83.578
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.899  | TNS=0.000  | WHS=0.018  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 20f5e3da1
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2125.297 ; gain = 83.578
+Phase 6 Post Hold Fix | Checksum: 20f5e3da1
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2125.297 ; gain = 83.578
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.819428 %
+  Global Horizontal Routing Utilization  = 0.93528 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 199de70de
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2125.297 ; gain = 83.578
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 199de70de
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2125.297 ; gain = 83.578
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1590d576b
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2125.297 ; gain = 83.578
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.899  | TNS=0.000  | WHS=0.018  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 1590d576b
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 2125.297 ; gain = 83.578
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 2125.297 ; gain = 83.578
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+147 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 2125.297 ; gain = 83.578
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.233 . Memory (MB): peak = 2138.336 ; gain = 13.039
+INFO: [Common 17-1381] The checkpoint 'C:/Users/USER/aaml_final/aaml_final.runs/impl_1/top_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
+Command: report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/USER/aaml_final/aaml_final.runs/impl_1/top_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+Command: report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Users/USER/aaml_final/aaml_final.runs/impl_1/top_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
+Command: report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+159 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file top_route_status.rpt -pb top_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file top_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file top_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file top_bus_skew_routed.rpt -pb top_bus_skew_routed.pb -rpx top_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 16 06:55:34 2023...

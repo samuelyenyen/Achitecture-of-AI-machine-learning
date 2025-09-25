@@ -1,0 +1,91 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Thu Jan 12 21:28:34 2023
+| Host         : DESKTOP-0BRDT4N running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Cfu_control_sets_placed.rpt
+| Design       : Cfu
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    13 |
+|    Minimum number of control sets                        |    13 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    36 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    13 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    11 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              33 |           17 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             347 |          141 |
+| Yes          | No                    | No                     |              90 |           43 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             734 |          221 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------+-----------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |        Enable Signal        |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-----------------------------+-----------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | cmd_valid_IBUF              | load_cout[3]_i_1_n_0              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG |                             | My_TPU/cal_count[8]_i_1_n_0       |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG | My_TPU/A_index0             | My_TPU/PE11/SR[0]                 |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG | in_valid                    | My_TPU/PE11/SR[0]                 |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG | K0                          |                                   |               12 |             24 |         2.00 |
+|  clk_IBUF_BUFG |                             | rsp_payload_outputs_0[31]_i_1_n_0 |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG |                             |                                   |               17 |             33 |         1.94 |
+|  clk_IBUF_BUFG | My_TPU/PE16/B4_r0           | My_TPU/PE11/SR[0]                 |               23 |             48 |         2.09 |
+|  clk_IBUF_BUFG |                             | My_TPU/B_IN_reg[3][7]_i_1_n_0     |               27 |             64 |         2.37 |
+|  clk_IBUF_BUFG | cmd_valid_IBUF              |                                   |               31 |             66 |         2.13 |
+|  clk_IBUF_BUFG | My_TPU/C_index_r[1]_i_1_n_0 | My_TPU/PE11/SR[0]                 |               54 |            130 |         2.41 |
+|  clk_IBUF_BUFG |                             | My_TPU/PE11/SR[0]                 |               99 |            242 |         2.44 |
+|  clk_IBUF_BUFG | My_TPU/PE16/B4_r0           | My_TPU/PE11/RSTP                  |              128 |            512 |         4.00 |
++----------------+-----------------------------+-----------------------------------+------------------+----------------+--------------+
+
+

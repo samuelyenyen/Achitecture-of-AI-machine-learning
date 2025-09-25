@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="3,043.941558 us"></ZoomStartTime>
+      <ZoomEndTime time="3,231.409149 us"></ZoomEndTime>
+      <Cursor1Time time="3,210.295000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="173"></NameColumnWidth>
+      <ValueColumnWidth column_width="59"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="group298" type="group">
+      <obj_property name="label">quan</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_tb/my_top/counter_quan" type="array">
+         <obj_property name="ElementShortName">counter_quan[15:0]</obj_property>
+         <obj_property name="ObjectShortName">counter_quan[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="group258" type="group">
+         <obj_property name="label">ROM</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/top_tb/my_top/my_rom/clka" type="logic">
+            <obj_property name="ElementShortName">clka</obj_property>
+            <obj_property name="ObjectShortName">clka</obj_property>
+         </wvobject>
+         <wvobject fp_name="/top_tb/my_top/my_rom/addra" type="array">
+            <obj_property name="ElementShortName">addra[15:0]</obj_property>
+            <obj_property name="ObjectShortName">addra[15:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/top_tb/my_top/my_rom/douta" type="array">
+            <obj_property name="ElementShortName">douta[7:0]</obj_property>
+            <obj_property name="ObjectShortName">douta[7:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/addr_rom" type="array">
+         <obj_property name="ElementShortName">addr_rom[15:0]</obj_property>
+         <obj_property name="ObjectShortName">addr_rom[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group302" type="group">
+      <obj_property name="label">com</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_tb/my_top/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/counter_com" type="array">
+         <obj_property name="ElementShortName">counter_com[8:0]</obj_property>
+         <obj_property name="ObjectShortName">counter_com[8:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/hes_ea" type="logic">
+         <obj_property name="ElementShortName">hes_ea</obj_property>
+         <obj_property name="ObjectShortName">hes_ea</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/hes_indata" type="array">
+         <obj_property name="ElementShortName">hes_indata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">hes_indata[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">8</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/temp5" type="array">
+         <obj_property name="ElementShortName">temp5[31:0]</obj_property>
+         <obj_property name="ObjectShortName">temp5[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">8</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/temp6" type="array">
+         <obj_property name="ElementShortName">temp6[31:0]</obj_property>
+         <obj_property name="ObjectShortName">temp6[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">8</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/counter_com1" type="array">
+         <obj_property name="ElementShortName">counter_com1[8:0]</obj_property>
+         <obj_property name="ObjectShortName">counter_com1[8:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/counter_com2" type="array">
+         <obj_property name="ElementShortName">counter_com2[8:0]</obj_property>
+         <obj_property name="ObjectShortName">counter_com2[8:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/counter_com3" type="array">
+         <obj_property name="ElementShortName">counter_com3[8:0]</obj_property>
+         <obj_property name="ObjectShortName">counter_com3[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/temp1" type="array">
+         <obj_property name="ElementShortName">temp1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">temp1[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">8</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/temp2" type="array">
+         <obj_property name="ElementShortName">temp2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">temp2[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">8</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/temp3" type="array">
+         <obj_property name="ElementShortName">temp3[31:0]</obj_property>
+         <obj_property name="ObjectShortName">temp3[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">8</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/temp4" type="array">
+         <obj_property name="ElementShortName">temp4[31:0]</obj_property>
+         <obj_property name="ObjectShortName">temp4[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">8</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/err" type="array">
+         <obj_property name="ElementShortName">err[31:0]</obj_property>
+         <obj_property name="ObjectShortName">err[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">8</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/ymx" type="array">
+         <obj_property name="ElementShortName">ymx[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ymx[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">8</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/counter_K" type="array">
+         <obj_property name="ElementShortName">counter_K[3:0]</obj_property>
+         <obj_property name="ObjectShortName">counter_K[3:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/i" type="array">
+         <obj_property name="ElementShortName">i[7:0]</obj_property>
+         <obj_property name="ObjectShortName">i[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/j" type="array">
+         <obj_property name="ElementShortName">j[7:0]</obj_property>
+         <obj_property name="ObjectShortName">j[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group289" type="group">
+      <obj_property name="label">RAM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_tb/my_top/my_ram/wea[0]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+         <obj_property name="label">wea</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_ram/addra" type="array">
+         <obj_property name="ElementShortName">addra[15:0]</obj_property>
+         <obj_property name="ObjectShortName">addra[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_ram/dina" type="array">
+         <obj_property name="ElementShortName">dina[14:0]</obj_property>
+         <obj_property name="ObjectShortName">dina[14:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">4</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_ram/douta" type="array">
+         <obj_property name="ElementShortName">douta[14:0]</obj_property>
+         <obj_property name="ObjectShortName">douta[14:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">4</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_ram/web[0]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+         <obj_property name="label">web</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_ram/addrb" type="array">
+         <obj_property name="ElementShortName">addrb[15:0]</obj_property>
+         <obj_property name="ObjectShortName">addrb[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_ram/dinb" type="array">
+         <obj_property name="ElementShortName">dinb[14:0]</obj_property>
+         <obj_property name="ObjectShortName">dinb[14:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">4</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_ram/doutb" type="array">
+         <obj_property name="ElementShortName">doutb[14:0]</obj_property>
+         <obj_property name="ObjectShortName">doutb[14:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">4</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group38" type="group">
+      <obj_property name="label">hex_RAM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/top_tb/my_top/hes_RAM/clka" type="logic">
+         <obj_property name="ElementShortName">clka</obj_property>
+         <obj_property name="ObjectShortName">clka</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/hes_RAM/wea[0]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+         <obj_property name="label">wea</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/hes_RAM/dina" type="array">
+         <obj_property name="ElementShortName">dina[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dina[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">8</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/hes_RAM/douta" type="array">
+         <obj_property name="ElementShortName">douta[31:0]</obj_property>
+         <obj_property name="ObjectShortName">douta[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">8</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/hes_RAM/web" type="array">
+         <obj_property name="ElementShortName">web[0:0]</obj_property>
+         <obj_property name="ObjectShortName">web[0:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/hes_RAM/addrb" type="array">
+         <obj_property name="ElementShortName">addrb[7:0]</obj_property>
+         <obj_property name="ObjectShortName">addrb[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/hes_RAM/dinb" type="array">
+         <obj_property name="ElementShortName">dinb[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dinb[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/hes_RAM/doutb" type="array">
+         <obj_property name="ElementShortName">doutb[31:0]</obj_property>
+         <obj_property name="ObjectShortName">doutb[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/current_state" type="array">
+         <obj_property name="ElementShortName">current_state[2:0]</obj_property>
+         <obj_property name="ObjectShortName">current_state[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/next_state" type="array">
+         <obj_property name="ElementShortName">next_state[2:0]</obj_property>
+         <obj_property name="ObjectShortName">next_state[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/counter_tx" type="array">
+         <obj_property name="ElementShortName">counter_tx[8:0]</obj_property>
+         <obj_property name="ObjectShortName">counter_tx[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/hes_RAM/addra" type="array">
+         <obj_property name="ElementShortName">addra[7:0]</obj_property>
+         <obj_property name="ObjectShortName">addra[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/tx_done" type="logic">
+         <obj_property name="ElementShortName">tx_done</obj_property>
+         <obj_property name="ObjectShortName">tx_done</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/tx_data" type="array">
+         <obj_property name="ElementShortName">tx_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_data[7:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/tx_in_valid" type="logic">
+         <obj_property name="ElementShortName">tx_in_valid</obj_property>
+         <obj_property name="ObjectShortName">tx_in_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/transmit_clk" type="logic">
+         <obj_property name="ElementShortName">transmit_clk</obj_property>
+         <obj_property name="ObjectShortName">transmit_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/counter_bit" type="array">
+         <obj_property name="ElementShortName">counter_bit[1:0]</obj_property>
+         <obj_property name="ObjectShortName">counter_bit[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/ja" type="array">
+         <obj_property name="ElementShortName">ja[1:0]</obj_property>
+         <obj_property name="ObjectShortName">ja[1:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/top_tb/my_top/myTX/my_trans/state" type="array">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group79" type="group">
+      <obj_property name="label">cordic</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/ymx" type="array">
+         <obj_property name="ElementShortName">ymx[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ymx[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">8</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/err" type="array">
+         <obj_property name="ElementShortName">err[31:0]</obj_property>
+         <obj_property name="ObjectShortName">err[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">8</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/ymx_1" type="array">
+         <obj_property name="ElementShortName">ymx_1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ymx_1[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">7</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/err_1" type="array">
+         <obj_property name="ElementShortName">err_1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">err_1[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">7</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/Ai" type="array">
+         <obj_property name="ElementShortName">Ai[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Ai[15:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">5</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/Aj" type="array">
+         <obj_property name="ElementShortName">Aj[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Aj[15:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">5</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/data_in" type="array">
+         <obj_property name="ElementShortName">data_in[63:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/tvalid_out" type="logic">
+         <obj_property name="ElementShortName">tvalid_out</obj_property>
+         <obj_property name="ObjectShortName">tvalid_out</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/phase2" type="array">
+         <obj_property name="ElementShortName">phase2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">phase2[15:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">13</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/phase" type="array">
+         <obj_property name="ElementShortName">phase[15:0]</obj_property>
+         <obj_property name="ObjectShortName">phase[15:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">13</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/rotate_input" type="array">
+         <obj_property name="ElementShortName">rotate_input[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rotate_input[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/data_out" type="array">
+         <obj_property name="ElementShortName">data_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/phase_valid" type="logic">
+         <obj_property name="ElementShortName">phase_valid</obj_property>
+         <obj_property name="ObjectShortName">phase_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/cos" type="array">
+         <obj_property name="ElementShortName">cos[15:0]</obj_property>
+         <obj_property name="ObjectShortName">cos[15:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">14</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/sin" type="array">
+         <obj_property name="ElementShortName">sin[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sin[15:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">14</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/sc_valid_out" type="logic">
+         <obj_property name="ElementShortName">sc_valid_out</obj_property>
+         <obj_property name="ObjectShortName">sc_valid_out</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/temp1" type="array">
+         <obj_property name="ElementShortName">temp1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">temp1[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/temp2" type="array">
+         <obj_property name="ElementShortName">temp2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">temp2[31:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">19</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/phase_cal" type="array">
+         <obj_property name="ElementShortName">phase_cal[15:0]</obj_property>
+         <obj_property name="ObjectShortName">phase_cal[15:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">13</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/valid_in" type="logic">
+         <obj_property name="ElementShortName">valid_in</obj_property>
+         <obj_property name="ObjectShortName">valid_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/valid_out" type="logic">
+         <obj_property name="ElementShortName">valid_out</obj_property>
+         <obj_property name="ObjectShortName">valid_out</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/Ci" type="array">
+         <obj_property name="ElementShortName">Ci[14:0]</obj_property>
+         <obj_property name="ObjectShortName">Ci[14:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">4</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/Cj" type="array">
+         <obj_property name="ElementShortName">Cj[14:0]</obj_property>
+         <obj_property name="ObjectShortName">Cj[14:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">4</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/Ai_V" type="array">
+         <obj_property name="ElementShortName">Ai_V[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Ai_V[15:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">12</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/Aj_V" type="array">
+         <obj_property name="ElementShortName">Aj_V[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Aj_V[15:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">12</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/Ci_V" type="array">
+         <obj_property name="ElementShortName">Ci_V[14:0]</obj_property>
+         <obj_property name="ObjectShortName">Ci_V[14:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">11</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_cordic/Cj_V" type="array">
+         <obj_property name="ElementShortName">Cj_V[14:0]</obj_property>
+         <obj_property name="ObjectShortName">Cj_V[14:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">11</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1526" type="group">
+      <obj_property name="label">RAM_V</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_tb/my_top/my_ram_V/clka" type="logic">
+         <obj_property name="ElementShortName">clka</obj_property>
+         <obj_property name="ObjectShortName">clka</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_ram_V/wea[0]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+         <obj_property name="label">wea</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_ram_V/addra" type="array">
+         <obj_property name="ElementShortName">addra[15:0]</obj_property>
+         <obj_property name="ObjectShortName">addra[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_ram_V/douta" type="array">
+         <obj_property name="ElementShortName">douta[14:0]</obj_property>
+         <obj_property name="ObjectShortName">douta[14:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">11</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_ram_V/clkb" type="logic">
+         <obj_property name="ElementShortName">clkb</obj_property>
+         <obj_property name="ObjectShortName">clkb</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_ram_V/web[0]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+         <obj_property name="label">web</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_ram_V/addrb" type="array">
+         <obj_property name="ElementShortName">addrb[15:0]</obj_property>
+         <obj_property name="ObjectShortName">addrb[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_ram_V/dina" type="array">
+         <obj_property name="ElementShortName">dina[14:0]</obj_property>
+         <obj_property name="ObjectShortName">dina[14:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">11</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_ram_V/dinb" type="array">
+         <obj_property name="ElementShortName">dinb[14:0]</obj_property>
+         <obj_property name="ObjectShortName">dinb[14:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">11</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb/my_top/my_ram_V/doutb" type="array">
+         <obj_property name="ElementShortName">doutb[14:0]</obj_property>
+         <obj_property name="ObjectShortName">doutb[14:0]</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">11</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

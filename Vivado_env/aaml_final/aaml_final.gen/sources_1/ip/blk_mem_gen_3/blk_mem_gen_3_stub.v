@@ -1,0 +1,30 @@
+// Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// --------------------------------------------------------------------------------
+// Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+// Date        : Mon Jan 16 01:43:54 2023
+// Host        : DESKTOP-0BRDT4N running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub -rename_top blk_mem_gen_3 -prefix
+//               blk_mem_gen_3_ blk_mem_gen_3_stub.v
+// Design      : blk_mem_gen_3
+// Purpose     : Stub declaration of top-level module interface
+// Device      : xc7a100tcsg324-1
+// --------------------------------------------------------------------------------
+
+// This empty module with port declaration file causes synthesis tools to infer a black box for IP.
+// The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
+// Please paste the declaration into a Verilog source file or add the file as an additional source.
+(* x_core_info = "blk_mem_gen_v8_4_5,Vivado 2022.1" *)
+module blk_mem_gen_3(clka, wea, addra, dina, douta, clkb, web, addrb, dinb, 
+  doutb)
+/* synthesis syn_black_box black_box_pad_pin="clka,wea[0:0],addra[15:0],dina[14:0],douta[14:0],clkb,web[0:0],addrb[15:0],dinb[14:0],doutb[14:0]" */;
+  input clka;
+  input [0:0]wea;
+  input [15:0]addra;
+  input [14:0]dina;
+  output [14:0]douta;
+  input clkb;
+  input [0:0]web;
+  input [15:0]addrb;
+  input [14:0]dinb;
+  output [14:0]doutb;
+endmodule

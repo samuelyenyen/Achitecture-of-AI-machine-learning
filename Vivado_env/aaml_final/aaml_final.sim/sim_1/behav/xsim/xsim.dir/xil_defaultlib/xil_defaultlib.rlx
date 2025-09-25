@@ -1,0 +1,19 @@
+0.7
+2020.2
+Apr 18 2022
+16:05:34
+C:/Users/USER/Downloads/BaudRateGenerator.v,1673812452,verilog,,C:/Users/USER/aaml_final/aaml_final.srcs/sources_1/new/cordic_rotate.v,,BaudRateGenerator,,,../../../../aaml_final.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/USER/Downloads/serial_tx.v,1673812445,verilog,,C:/Users/USER/Downloads/top.v,,Uart8Transmitter,,,../../../../aaml_final.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/USER/Downloads/top.v,1673822745,verilog,,C:/Users/USER/Downloads/top_level.v,,top,,,../../../../aaml_final.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/USER/Downloads/top_level.v,1673823129,verilog,,C:/Users/USER/Downloads/top_tb.v,,top_level,,,../../../../aaml_final.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/USER/Downloads/top_tb.v,1673822877,verilog,,,,top_tb,,,../../../../aaml_final.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v,1673812346,verilog,,C:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,,blk_mem_gen_0,,,../../../../aaml_final.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/blk_mem_gen_1/sim/blk_mem_gen_1.v,1673765117,verilog,,C:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v,,blk_mem_gen_1,,,../../../../aaml_final.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/blk_mem_gen_2/sim/blk_mem_gen_2.v,1673808888,verilog,,C:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/blk_mem_gen_3/sim/blk_mem_gen_3.v,,blk_mem_gen_2,,,../../../../aaml_final.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v,1673822687,verilog,,C:/Users/USER/Downloads/BaudRateGenerator.v,,clk_wiz_0,,,../../../../aaml_final.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,1673822687,verilog,,C:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v,,clk_wiz_0_clk_wiz,,,../../../../aaml_final.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/cordic_0/sim/cordic_0.vhd,1673798005,vhdl,,,,cordic_0,,,,,,,,
+C:/Users/USER/aaml_final/aaml_final.gen/sources_1/ip/cordic_1/sim/cordic_1.vhd,1673445028,vhdl,,,,cordic_1,,,,,,,,
+C:/Users/USER/aaml_final/aaml_final.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,,,,,,,
+C:/Users/USER/aaml_final/aaml_final.srcs/sim_1/new/cordic_rotate_tb.v,1673799892,verilog,,,,cordic_rotate_tb,,,../../../../aaml_final.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/USER/aaml_final/aaml_final.srcs/sources_1/new/cordic_rotate.v,1673802757,verilog,,C:/Users/USER/aaml_final/aaml_final.srcs/sim_1/new/cordic_rotate_tb.v,,cordic_rotate,,,../../../../aaml_final.gen/sources_1/ip/clk_wiz_0,,,,,

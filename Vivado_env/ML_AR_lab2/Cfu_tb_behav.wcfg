@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Cfu_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Cfu_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="223.401 ns"></ZoomEndTime>
+      <Cursor1Time time="35.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="185"></NameColumnWidth>
+      <ValueColumnWidth column_width="73"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/Cfu_tb/cmd_valid" type="logic">
+      <obj_property name="ElementShortName">cmd_valid</obj_property>
+      <obj_property name="ObjectShortName">cmd_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Cfu_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Cfu_tb/my_cfu/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Cfu_tb/rsp_ready" type="logic">
+      <obj_property name="ElementShortName">rsp_ready</obj_property>
+      <obj_property name="ObjectShortName">rsp_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Cfu_tb/my_cfu/cmd_valid_r" type="logic">
+      <obj_property name="ElementShortName">cmd_valid_r</obj_property>
+      <obj_property name="ObjectShortName">cmd_valid_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="group63" type="group">
+      <obj_property name="label">ID</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/Cfu_tb/cmd_payload_function_id" type="array">
+         <obj_property name="ElementShortName">cmd_payload_function_id[9:0]</obj_property>
+         <obj_property name="ObjectShortName">cmd_payload_function_id[9:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/op" type="array">
+         <obj_property name="ElementShortName">op[2:0]</obj_property>
+         <obj_property name="ObjectShortName">op[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/func7" type="array">
+         <obj_property name="ElementShortName">func7[6:0]</obj_property>
+         <obj_property name="ObjectShortName">func7[6:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group79" type="group">
+      <obj_property name="label">input</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/Cfu_tb/cmd_payload_inputs_0" type="array">
+         <obj_property name="ElementShortName">cmd_payload_inputs_0[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cmd_payload_inputs_0[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/cmd_payload_inputs_0_buf" type="array">
+         <obj_property name="ElementShortName">cmd_payload_inputs_0_buf[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cmd_payload_inputs_0_buf[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/cmd_payload_inputs_1" type="array">
+         <obj_property name="ElementShortName">cmd_payload_inputs_1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cmd_payload_inputs_1[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/cmd_payload_inputs_1_buf" type="array">
+         <obj_property name="ElementShortName">cmd_payload_inputs_1_buf[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cmd_payload_inputs_1_buf[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/Cfu_tb/cmd_ready" type="logic">
+      <obj_property name="ElementShortName">cmd_ready</obj_property>
+      <obj_property name="ObjectShortName">cmd_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Cfu_tb/rsp_valid" type="logic">
+      <obj_property name="ElementShortName">rsp_valid</obj_property>
+      <obj_property name="ObjectShortName">rsp_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Cfu_tb/rsp_payload_outputs_0" type="array">
+      <obj_property name="ElementShortName">rsp_payload_outputs_0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rsp_payload_outputs_0[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Cfu_tb/my_cfu/load_cout" type="array">
+      <obj_property name="ElementShortName">load_cout[3:0]</obj_property>
+      <obj_property name="ObjectShortName">load_cout[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Cfu_tb/my_cfu/stop_count" type="logic">
+      <obj_property name="ElementShortName">stop_count</obj_property>
+      <obj_property name="ObjectShortName">stop_count</obj_property>
+   </wvobject>
+   <wvobject fp_name="group58" type="group">
+      <obj_property name="label">Abuffer</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/Cfu_tb/my_cfu/gbuff_A/index" type="array">
+         <obj_property name="ElementShortName">index[7:0]</obj_property>
+         <obj_property name="ObjectShortName">index[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/gbuff_A/data_in" type="array">
+         <obj_property name="ElementShortName">data_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/gbuff_A/data_out" type="array">
+         <obj_property name="ElementShortName">data_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/gbuff_A/wr_en" type="logic">
+         <obj_property name="ElementShortName">wr_en</obj_property>
+         <obj_property name="ObjectShortName">wr_en</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group68" type="group">
+      <obj_property name="label">Bbuffer</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/Cfu_tb/my_cfu/gbuff_B/wr_en" type="logic">
+         <obj_property name="ElementShortName">wr_en</obj_property>
+         <obj_property name="ObjectShortName">wr_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/gbuff_B/index" type="array">
+         <obj_property name="ElementShortName">index[7:0]</obj_property>
+         <obj_property name="ObjectShortName">index[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/gbuff_B/data_in" type="array">
+         <obj_property name="ElementShortName">data_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/gbuff_B/data_out" type="array">
+         <obj_property name="ElementShortName">data_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/Cfu_tb/my_cfu/curr_state" type="array">
+      <obj_property name="ElementShortName">curr_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Cfu_tb/my_cfu/next_state" type="array">
+      <obj_property name="ElementShortName">next_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group84" type="group">
+      <obj_property name="label">KMN</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/Cfu_tb/my_cfu/K" type="array">
+         <obj_property name="ElementShortName">K[9:0]</obj_property>
+         <obj_property name="ObjectShortName">K[9:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/M" type="array">
+         <obj_property name="ElementShortName">M[9:0]</obj_property>
+         <obj_property name="ObjectShortName">M[9:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/N" type="array">
+         <obj_property name="ElementShortName">N[9:0]</obj_property>
+         <obj_property name="ObjectShortName">N[9:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/Cfu_tb/my_cfu/state_count" type="array">
+      <obj_property name="ElementShortName">state_count[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state_count[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Cfu_tb/my_cfu/in_valid" type="logic">
+      <obj_property name="ElementShortName">in_valid</obj_property>
+      <obj_property name="ObjectShortName">in_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/busy" type="logic">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="group399" type="group">
+      <obj_property name="label">Cbuffer</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/Cfu_tb/my_cfu/gbuff_C/wr_en" type="logic">
+         <obj_property name="ElementShortName">wr_en</obj_property>
+         <obj_property name="ObjectShortName">wr_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/gbuff_C/index" type="array">
+         <obj_property name="ElementShortName">index[1:0]</obj_property>
+         <obj_property name="ObjectShortName">index[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/gbuff_C/data_in" type="array">
+         <obj_property name="ElementShortName">data_in[127:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/gbuff_C/data_out" type="array">
+         <obj_property name="ElementShortName">data_out[127:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[127:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/Cfu_tb/my_cfu/C_data_out" type="array">
+      <obj_property name="ElementShortName">C_data_out[127:0]</obj_property>
+      <obj_property name="ObjectShortName">C_data_out[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Cfu_tb/my_cfu/C_index" type="array">
+      <obj_property name="ElementShortName">C_index[1:0]</obj_property>
+      <obj_property name="ObjectShortName">C_index[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group132" type="group">
+      <obj_property name="label">TPU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/busy" type="logic">
+         <obj_property name="ElementShortName">busy</obj_property>
+         <obj_property name="ObjectShortName">busy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/C_data_in" type="array">
+         <obj_property name="ElementShortName">C_data_in[127:0]</obj_property>
+         <obj_property name="ObjectShortName">C_data_in[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/PE_out_row1" type="array">
+         <obj_property name="ElementShortName">PE_out_row1[127:0]</obj_property>
+         <obj_property name="ObjectShortName">PE_out_row1[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/PE_out_row2" type="array">
+         <obj_property name="ElementShortName">PE_out_row2[127:0]</obj_property>
+         <obj_property name="ObjectShortName">PE_out_row2[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/PE_out_row3" type="array">
+         <obj_property name="ElementShortName">PE_out_row3[127:0]</obj_property>
+         <obj_property name="ObjectShortName">PE_out_row3[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/PE_out_row4" type="array">
+         <obj_property name="ElementShortName">PE_out_row4[127:0]</obj_property>
+         <obj_property name="ObjectShortName">PE_out_row4[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/C_index" type="array">
+         <obj_property name="ElementShortName">C_index[1:0]</obj_property>
+         <obj_property name="ObjectShortName">C_index[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/C_wr_en" type="logic">
+         <obj_property name="ElementShortName">C_wr_en</obj_property>
+         <obj_property name="ObjectShortName">C_wr_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/in_valid" type="logic">
+         <obj_property name="ElementShortName">in_valid</obj_property>
+         <obj_property name="ObjectShortName">in_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/K" type="array">
+         <obj_property name="ElementShortName">K[7:0]</obj_property>
+         <obj_property name="ObjectShortName">K[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/M" type="array">
+         <obj_property name="ElementShortName">M[7:0]</obj_property>
+         <obj_property name="ObjectShortName">M[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/N" type="array">
+         <obj_property name="ElementShortName">N[7:0]</obj_property>
+         <obj_property name="ObjectShortName">N[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/B_index" type="array">
+         <obj_property name="ElementShortName">B_index[7:0]</obj_property>
+         <obj_property name="ObjectShortName">B_index[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/A_index" type="array">
+         <obj_property name="ElementShortName">A_index[7:0]</obj_property>
+         <obj_property name="ObjectShortName">A_index[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/A_data_out" type="array">
+         <obj_property name="ElementShortName">A_data_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">A_data_out[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/B_data_out" type="array">
+         <obj_property name="ElementShortName">B_data_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">B_data_out[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/M_r" type="array">
+         <obj_property name="ElementShortName">M_r[7:0]</obj_property>
+         <obj_property name="ObjectShortName">M_r[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/A_wn" type="array">
+         <obj_property name="ElementShortName">A_wn[6:0]</obj_property>
+         <obj_property name="ObjectShortName">A_wn[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/PE_times" type="logic">
+         <obj_property name="ElementShortName">PE_times</obj_property>
+         <obj_property name="ObjectShortName">PE_times</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/n_A" type="logic">
+         <obj_property name="ElementShortName">n_A</obj_property>
+         <obj_property name="ObjectShortName">n_A</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/curr_state" type="array">
+         <obj_property name="ElementShortName">curr_state[2:0]</obj_property>
+         <obj_property name="ObjectShortName">curr_state[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/next_state" type="array">
+         <obj_property name="ElementShortName">next_state[2:0]</obj_property>
+         <obj_property name="ObjectShortName">next_state[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/A4_rrr" type="array">
+         <obj_property name="ElementShortName">A4_rrr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">A4_rrr[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/A2_r" type="array">
+         <obj_property name="ElementShortName">A2_r[7:0]</obj_property>
+         <obj_property name="ObjectShortName">A2_r[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/cal_count" type="array">
+         <obj_property name="ElementShortName">cal_count[8:0]</obj_property>
+         <obj_property name="ObjectShortName">cal_count[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="group1019" type="group">
+         <obj_property name="label">PE1</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/PE1/clk" type="logic">
+            <obj_property name="ElementShortName">clk</obj_property>
+            <obj_property name="ObjectShortName">clk</obj_property>
+         </wvobject>
+         <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/PE1/next_state" type="array">
+            <obj_property name="ElementShortName">next_state[2:0]</obj_property>
+            <obj_property name="ObjectShortName">next_state[2:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/PE1/curr_state" type="array">
+            <obj_property name="ElementShortName">curr_state[2:0]</obj_property>
+            <obj_property name="ObjectShortName">curr_state[2:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/PE1/A_data_out" type="array">
+            <obj_property name="ElementShortName">A_data_out[7:0]</obj_property>
+            <obj_property name="ObjectShortName">A_data_out[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/PE1/B_data_out" type="array">
+            <obj_property name="ElementShortName">B_data_out[7:0]</obj_property>
+            <obj_property name="ObjectShortName">B_data_out[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/PE1/PE" type="array">
+            <obj_property name="ElementShortName">PE[31:0]</obj_property>
+            <obj_property name="ObjectShortName">PE[31:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/PE1/A_pro_data" type="array">
+            <obj_property name="ElementShortName">A_pro_data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">A_pro_data[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/PE1/B_pro_data" type="array">
+            <obj_property name="ElementShortName">B_pro_data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">B_pro_data[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/PE1/extend_A" type="array">
+            <obj_property name="ElementShortName">extend_A[8:0]</obj_property>
+            <obj_property name="ObjectShortName">extend_A[8:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/PE1/extend_B" type="array">
+            <obj_property name="ElementShortName">extend_B[8:0]</obj_property>
+            <obj_property name="ObjectShortName">extend_B[8:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/PE1/mul_sign" type="array">
+            <obj_property name="ElementShortName">mul_sign[31:0]</obj_property>
+            <obj_property name="ObjectShortName">mul_sign[31:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/cal_count" type="array">
+            <obj_property name="ElementShortName">cal_count[8:0]</obj_property>
+            <obj_property name="ObjectShortName">cal_count[8:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/Cfu_tb/my_cfu/My_TPU/cal_count" type="array">
+            <obj_property name="ElementShortName">cal_count[8:0]</obj_property>
+            <obj_property name="ObjectShortName">cal_count[8:0]</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>
